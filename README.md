@@ -1,5 +1,5 @@
 # LeetCode-javascript
-## 栈
+## 栈和队列
 1. 用栈实现队列 - 
   **LeetCode第232题**
   ```
