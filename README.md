@@ -178,7 +178,7 @@
   ```
   5. 有效的括号 - 
   LeetCode第20题
-    ```
+  ```
   var isValid = function(s) {
     let stack = []
     for(var i=0; i<s.length; i++){
