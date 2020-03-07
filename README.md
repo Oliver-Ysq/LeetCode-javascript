@@ -202,4 +202,21 @@
     return stack.length===0
   };
   ```
-  6. 
+  6. 下一个更大元素
+  leetcode第503题
+  ```
+  var nextGreaterElements = function(nums) {
+    let stack = []
+    let result =Array.from({length: nums.length})
+    for(let i=0; i<nums.length; i++) result[i]=-1
+    for(i=0; i<nums.length*2; i++){
+      let j = i%nums.length;
+      while(stack.length!==0 && nums[j]>nums[stack.slice(-1)[0]]){  //如果即将入栈元素比栈顶元素大
+        let tmp = stack.pop() //删掉栈顶元素
+        result[tmp] = nums[j] //记录
+      }
+      stack.push(j)         //入栈
+    }
+    return result
+  };
+  ```
